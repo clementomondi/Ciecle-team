@@ -1,0 +1,93 @@
+/* Write your CSS code here */
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  background-color: white;
+  overflow: hidden;
+  background-size: cover;
+  object-fit: cover;
+  background-position: center;
+}
+
+span {
+  height: 40px;
+  width: 40px;
+}
+
+.image-container {
+  width: 140px;
+  height: 200px;
+  transform-style: preserve-3d;
+  transform: perspective(1000px) rotate(0deg);
+  transition: .7s;
+}
+
+h1 {
+  margin-top: 80px;
+  font-size: 20px;
+  font-weight: 700;
+  color: aqua;
+}
+
+.image-container span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotateY(calc(var(--i)*45deg)) translateZ(400px);
+  width: 50%;
+}
+
+.image-container span img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: cover;
+  height: 70px;
+}
+
+.btn-container {
+  position: relative;
+  width: 80%;
+}
+
+img {
+  border-radius: 10em;
+  height: 40px;
+  object-fit: cover;
+  width: 40px;
+}
+
+.btn {
+  position: absolute;
+  bottom: -80px;
+  color: white;
+  background-color: aqua;
+  bottom: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 3em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .7s;
+}
+
+.btn:hover {
+  filter: brightness(1.5);
+  transform: scale(0.76);
+}
+
+#prev {
+  left: 20%;
+}
+
+#next {
+  right: 20%;
+}
